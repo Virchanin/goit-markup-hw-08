@@ -1,0 +1,83 @@
+// heero
+
+.button{
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    color:var(--current-color);
+    background-color: var(--accent-color);
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 10px 32px;
+    border: 0px;
+    min-width: 200px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color box-shadowv var( --transition);
+
+    &:hover{
+        background-color:var(--hover-butom-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}
+
+// footer
+
+.footer-form__buttom{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    color:var(--current-color);
+    width: 200px;
+    height: 50px;
+    margin-left: 12px;
+    padding: 10px 62px 10px 29px;
+    background-color:var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    transition:var(--transition);
+
+    &:hover,
+    &:focus{
+    background-color:var(--hover-butom-color);
+    }
+}
+
+.footer-form__send{
+    fill:var(--current-color);
+    position: absolute;
+    top: 13px;
+    right: 8px;
+    bottom: 13px;
+    left: 148px;
+}
+
+// modal
+
+.modal-button{
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color:var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    color:var(--current-color);
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: background-color var(--transition);
+
+    &:hover,
+    &:focus{
+    background-color:var(--hover-butom-color);
+    }
+}

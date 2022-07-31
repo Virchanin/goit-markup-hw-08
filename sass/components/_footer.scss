@@ -1,0 +1,43 @@
+.footer{
+    padding: 60px 0;
+    background-color:var(--footer-background-color);   
+}
+
+.footer-container{
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-box:first-child{
+    margin-right: 70px;
+}
+
+// contacts
+
+.adress{
+    font-style: normal;
+}
+
+.footer-list__adress{
+    padding-top: 20px;
+    font-size: 14px;
+    line-height: 1.7;
+    color:var(--current-color);
+    letter-spacing: 0.03em;
+}
+
+.footer-list__link{
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color:var( --footer-link-color);
+    transition:color var(--transition);
+
+    &:hover{
+        color:var(--accent-color);
+    }
+}
+
+.footer-list li:not(:last-child){
+    margin-bottom: 9px;
+}
