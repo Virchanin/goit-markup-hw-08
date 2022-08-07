@@ -19,42 +19,87 @@
     <!-- Верхняя линия -->
     <header class="header">
       <div class="container header-cont">
-        <a class="logo" href="/">Web<span class="logo-style">Studio</span></a>
-        <nav class="header-nav">
-          <ul class="header-nav__list">
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="index.html">Студия</a>
-            </li>
-            <li class="header-nav__item">
-              <a
-                class="header-nav__link header-nav__link--current"
-                href="portfolio.html"
-                >Портфолио</a
+        <a class="logo logo-header" href="/"
+          >Web<span class="logo-style">Studio</span></a
+        >
+        <button
+          class="menu-button is-open"
+          aria-expanded="false"
+          data-menu-button
+          type="button"
+        >
+          <svg
+            class="menu-button__icon"
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="icon-cross"
+              href="./images/icons.svg#icon-close-menu"
+            ></use>
+            <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="menu-container is-open" id="menu-container" data-menu>
+          <nav class="header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="index.html">Студия</a>
+              </li>
+              <li class="header-nav__item">
+                <a
+                  class="header-nav__link header-nav__link--current"
+                  href="portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="header-list">
+            <li class="header-list__item">
+              <a class="header-list__link" href="mailto:info@devstudio.com">
+                <svg class="header-list__link-icon" width="16px" height="12px">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="">Контакты</a>
+            <li class="header-list__item">
+              <a class="header-list__link tel" href="tel:+380961111111">
+                <svg class="header-list__link-icon" width="10px" height="16px">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="header-list">
-          <li class="header-list__item">
-            <a class="header-list__link" href="mailto:info@devstudio.com">
-              <svg class="header-list__link-icon" width="16px" height="12px">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="header-list__item">
-            <a class="header-list__link" href="tel:+380961111111">
-              <svg class="header-list__link-icon" width="10px" height="16px">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <div class="heder-socials">
+            <ul class="heder-socials__list">
+              <li class="heder-socials__item">
+                <a class="heder-socials__link heder-socials__link--dek" href="#"
+                  >Instagram</a
+                >
+              </li>
+              <li class="heder-socials__item">
+                <a class="heder-socials__link heder-socials__link--dek" href="#"
+                  >Twitter</a
+                >
+              </li>
+              <li class="heder-socials__item">
+                <a class="heder-socials__link heder-socials__link--dek" href="#"
+                  >Facebook</a
+                >
+              </li>
+              <li class="heder-socials__item">
+                <a class="heder-socials__link" href="#">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!-- Портфолио -->
@@ -91,8 +136,40 @@
           <ul class="portfolio-img">
             <li class="portfolio-img__list">
               <div class="portfolio-img__thumb">
+                <picture>
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_1@2x.webp 2x , ./images/portfolio/project_1@3x.webp 3x.webp "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_1@2x.jpg 2x , ./images/portfolio/project_1@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="./images/portfolio/project_1@2x.webp 2x , ./images/portfolio/project_1@3x.webp 3x.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="./images/portfolio/project_1@2x.jpg 2x , ./images/portfolio/project_1@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="./images/portfolio/project_1@2x.webp 2x , ./images/portfolio/project_1@3x.webp 3x.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="./images/portfolio/project_1@2x.jpg 2x , ./images/portfolio/project_1@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                </picture>
                 <img
-                  src="images/portfolio/project_1.jpg"
+                  src="images/portfolio/project_1@1x.jpg"
                   alt="Открытый ноутбук с веб-сайтом Технокряк"
                   width="370"
                   height="294"
@@ -112,12 +189,45 @@
             </li>
             <li class="portfolio-img__list">
               <div class="portfolio-img__thumb">
-                <img
-                  src="images/portfolio/project_2.jpg"
-                  alt="Постер баскетбольного матча между командами Нью Орлеан и Голден Стак"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_2@2x.webp 2x , ./images/portfolio/project_2@3x.webp 3x.webp "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_2@2x.jpg 2x , ./images/portfolio/project_2@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="./images/portfolio/project_2@2x.webp 2x , ./images/portfolio/project_2@3x.webp 3x.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="./images/portfolio/project_2@2x.jpg 2x , ./images/portfolio/project_2@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="./images/portfolio/project_2@2x.webp 2x , ./images/portfolio/project_2@3x.webp 3x.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="./images/portfolio/project_2@2x.jpg 2x , ./images/portfolio/project_2@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+
+                  <img
+                    src="images/portfolio/project_2@1x.jpg"
+                    alt="Постер баскетбольного матча между командами Нью Орлеан и Голден Стак"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <div class="portfolio-img__overlay">
                   <p class="portfolio-img__overlay-text">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -136,12 +246,45 @@
             </li>
             <li class="portfolio-img__list">
               <div class="portfolio-img__thumb">
-                <img
-                  src="images/portfolio/project_3.jpg"
-                  alt="Логотип ресторана Сифуд"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_3@2x.webp 2x , ./images/portfolio/project_3@3x.webp 3x.webp "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_3@2x.jpg 2x , ./images/portfolio/project_3@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="./images/portfolio/project_3@2x.webp 2x , ./images/portfolio/project_3@3x.webp 3x.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="./images/portfolio/project_3@2x.jpg 2x , ./images/portfolio/project_3@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="./images/portfolio/project_3@2x.webp 2x , ./images/portfolio/project_3@3x.webp 3x.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="./images/portfolio/project_3@2x.jpg 2x , ./images/portfolio/project_3@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+
+                  <img
+                    src="images/portfolio/project_3@1x.jpg"
+                    alt="Логотип ресторана Сифуд"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <div class="portfolio-img__overlay">
                   <p class="portfolio-img__overlay-text">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -158,12 +301,45 @@
             </li>
             <li class="portfolio-img__list">
               <div class="portfolio-img__thumb">
-                <img
-                  src="images/portfolio/project_4.jpg"
-                  alt="Черные наушники на белом фоне"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_4@2x.webp 2x , ./images/portfolio/project_4@3x.webp 3x.webp "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_4@2x.jpg 2x , ./images/portfolio/project_4@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="./images/portfolio/project_4@2x.webp 2x , ./images/portfolio/project_4@3x.webp 3x.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="./images/portfolio/project_4@2x.jpg 2x , ./images/portfolio/project_4@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="./images/portfolio/project_4@2x.webp 2x , ./images/portfolio/project_4@3x.webp 3x.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="./images/portfolio/project_4@2x.jpg 2x , ./images/portfolio/project_4@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+
+                  <img
+                    src="images/portfolio/project_4@1x.jpg"
+                    alt="Черные наушники на белом фоне"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <div class="portfolio-img__overlay">
                   <p class="portfolio-img__overlay-text">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -180,12 +356,45 @@
             </li>
             <li class="portfolio-img__list">
               <div class="portfolio-img__thumb">
-                <img
-                  src="images/portfolio/project_5.jpg"
-                  alt="Две коробки на белом фоне"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_5@2x.webp 2x , ./images/portfolio/project_5@3x.webp 3x.webp "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_5@2x.jpg 2x , ./images/portfolio/project_5@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="./images/portfolio/project_5@2x.webp 2x , ./images/portfolio/project_5@3x.webp 3x.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="./images/portfolio/project_5@2x.jpg 2x , ./images/portfolio/project_5@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="./images/portfolio/project_5@2x.webp 2x , ./images/portfolio/project_5@3x.webp 3x.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="./images/portfolio/project_5@2x.jpg 2x , ./images/portfolio/project_5@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+
+                  <img
+                    src="images/portfolio/project_5@1x.jpg"
+                    alt="Две коробки на белом фоне"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <div class="portfolio-img__overlay">
                   <p class="portfolio-img__overlay-text">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -202,12 +411,45 @@
             </li>
             <li class="portfolio-img__list">
               <div class="portfolio-img__thumb">
-                <img
-                  src="images/portfolio/project_6.jpg"
-                  alt="Монитор на белом фоне"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_6@2x.webp 2x , ./images/portfolio/project_6@3x.webp 3x.webp "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_6@2x.jpg 2x , ./images/portfolio/project_6@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="./images/portfolio/project_6@2x.webp 2x , ./images/portfolio/project_6@3x.webp 3x.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="./images/portfolio/project_6@2x.jpg 2x , ./images/portfolio/project_6@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="./images/portfolio/project_6@2x.webp 2x , ./images/portfolio/project_6@3x.webp 3x.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="./images/portfolio/project_6@2x.jpg 2x , ./images/portfolio/project_6@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+
+                  <img
+                    src="images/portfolio/project_6@1x.jpg"
+                    alt="Монитор на белом фоне"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <div class="portfolio-img__overlay">
                   <p class="portfolio-img__overlay-text">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -226,12 +468,45 @@
             </li>
             <li class="portfolio-img__list">
               <div class="portfolio-img__thumb">
-                <img
-                  src="images/portfolio/project_7.jpg"
-                  alt="Раскрытый журнал на белом фоне"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_7@2x.webp 2x , ./images/portfolio/project_7@3x.webp 3x.webp "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_7@2x.jpg 2x , ./images/portfolio/project_7@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="./images/portfolio/project_7@2x.webp 2x , ./images/portfolio/project_7@3x.webp 3x.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="./images/portfolio/project_7@2x.jpg 2x , ./images/portfolio/project_7@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="./images/portfolio/project_7@2x.webp 2x , ./images/portfolio/project_7@3x.webp 3x.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="./images/portfolio/project_7@2x.jpg 2x , ./images/portfolio/project_7@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+
+                  <img
+                    src="images/portfolio/project_7@1x.jpg"
+                    alt="Раскрытый журнал на белом фоне"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <div class="portfolio-img__overlay">
                   <p class="portfolio-img__overlay-text">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -248,12 +523,45 @@
             </li>
             <li class="portfolio-img__list">
               <div class="portfolio-img__thumb">
-                <img
-                  src="images/portfolio/project_8.jpg"
-                  alt="Ярлык с логотипом на белом фоне"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_8@2x.webp 2x , ./images/portfolio/project_8@3x.webp 3x.webp "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_8@2x.jpg 2x , ./images/portfolio/project_8@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="./images/portfolio/project_8@2x.webp 2x , ./images/portfolio/project_8@3x.webp 3x.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="./images/portfolio/project_8@2x.jpg 2x , ./images/portfolio/project_8@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="./images/portfolio/project_8@2x.webp 2x , ./images/portfolio/project_8@3x.webp 3x.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="./images/portfolio/project_8@2x.jpg 2x , ./images/portfolio/project_8@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+
+                  <img
+                    src="images/portfolio/project_8@1x.jpg"
+                    alt="Ярлык с логотипом на белом фоне"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <div class="portfolio-img__overlay">
                   <p class="portfolio-img__overlay-text">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -270,12 +578,45 @@
             </li>
             <li class="portfolio-img__list">
               <div class="portfolio-img__thumb">
-                <img
-                  src="images/portfolio/project_9.jpg"
-                  alt="Мужчина работает за ноутбуком"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_9@2x.webp 2x , ./images/portfolio/project_9@3x.webp 3x.webp "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_9@2x.jpg 2x , ./images/portfolio/project_9@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="./images/portfolio/project_9@2x.webp 2x , ./images/portfolio/project_9@3x.webp 3x.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="./images/portfolio/project_9@2x.jpg 2x , ./images/portfolio/project_9@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="./images/portfolio/project_9@2x.webp 2x , ./images/portfolio/project_9@3x.webp 3x.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="./images/portfolio/project_9@2x.jpg 2x , ./images/portfolio/project_9@3x.webp 3x.jpg"
+                    type="image/jpg"
+                  />
+
+                  <img
+                    src="images/portfolio/project_9@1x.jpg"
+                    alt="Мужчина работает за ноутбуком"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <div class="portfolio-img__overlay">
                   <p class="portfolio-img__overlay-text">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -377,5 +718,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
