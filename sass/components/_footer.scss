@@ -5,18 +5,23 @@
 
 .footer-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  gap: 60px;
+  
+  
+
+  @media screen and(max-width:1199px) {
+   flex-wrap: wrap;
+   gap: 60px;
+   text-align: center;
+   justify-content: center;
+  }
 
   @media screen and(min-width:768px) {
     justify-content: space-around;
+    align-items: baseline;
   }
 
   @media screen and(min-width:1200px) {
-    align-items: baseline;
-    flex-wrap: nowrap;
+     justify-content:space-between ;
   }
 }
 

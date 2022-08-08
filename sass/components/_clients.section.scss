@@ -11,9 +11,17 @@
   justify-content: center;
   border: 1px solid var(--clients-icon-color);
   border-radius: 4px;
-  width: 170px;
+  width: 210px;
   height: 92px;
   transition: border-color var(--transition);
+
+  @media screen and(min-width:768px){
+    width: 226px;
+  }
+
+  @media screen and(min-width:1200px){
+    width: 170px;
+  }
 
   &:hover,
   &:focus {
